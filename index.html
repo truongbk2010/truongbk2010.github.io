@@ -49,40 +49,20 @@
 <script type="text/javascript">
 
     var datajson = {
-        "buttworkout": ["Buttworkout","Most EFFECTIVE Butt workout","buttocksworkout.hipsworkouts.forwomen.legworkout"],
-        "homeworkout2": ["Home Workout - No Equipment","Home workouts for fast bodybuilding at home - no equipment needed.","homeworkout.homeworkouts.noequipment"] ,
-        "sleepsounds": ["sleepsounds","sleepsounds","sleepsounds.relaxandsleep.whitenoise"] ,
-        "running":["Running","Running","runningforweightloss.runningapp.runningtracker"],
-        "pedometer": ["Pedometer","Free pedometer, easy to track calories","pedometer.steptracker.calorieburner.stepcounter"] ,
-        "pc": ["PC","Remind you the next period or ovluation.","com.popularapp.periodcalendar"],
-        "walkplan":["walkplan","walkplan","walking.weightloss.walk.tracker"],
-        "mp3player": ["Mp3player","Mp3player","freemusic.download.musicplayer.mp3player"],
-        "loseweight": ["LoseWeight","Lose weight fast with scientific workouts and a healthy diet in 30 days.","loseweight.weightloss.workout.fitness"] ,
-        "pedometer2": ["Pedometer2","Pedometer2","pedometer.stepcounter.calorieburner.pedometerforwalking"] ,
-        "homeworkout": ["HomeWorkout","Bring the Gym Home.","workout.homeworkouts.workouttrainer"],
-        // "bluelightfilter": ["BlueLightFilter","Fall asleep easily with night mode","com.eyefilter.nightmode.bluelightfilter"],
-        "30days": ["30Days","Keep fit at home for FREE","com.popularapp.thirtydayfitnesschallenge"],
-        "7mins": ["7Mins","Scientifically proven to assist weight loss and improve cardiovascular function.","com.popularapp.sevenmins"],
-        "water": ["Water","Water Your Body","com.northpark.drinkwater"],
-        "absworkout": ["ABSWorkout","ABSWorkout","absworkout.bellyfatworkout.waistworkout.abdominalworkout"],
-        "homeworkout3": ["HomeWorkout3","HomeWorkout3","homeworkout.homeworkouts.workoutathome.musclebuilding"],
-        "sixpack": ["SixPack","SixPack","sixpack.sixpackabs.absworkout"],
-        "musicplayer": ["MusicPlayer","MusicPlayer","musicplayer.musicapps.music.mp3player"],
-        "videoplayer": ["VideoPlayer","Play ALL video format, support 4K & HD!","video.player.videoplayer"],
-        "instaget": ["Instaget","Photo, video & tags downloader","com.popularapp.videodownloaderforinstagram"],
-        // "fbdownloader": ["FBDownloader","Easy-to-use video downloader for Facebook","facebookvideodownloader.videodownloaderforfacebook"],
-        "bodyeditor": ["Body Editor","Perfect body shape editor.","breastenlarger.bodyeditor.photoeditor"],
-        "collagemaker": ["CollageMaker","Collages with layouts, filters & emojis.","photoeditor.layout.collagemaker"],
-        "pyramidsolitaire": ["PyramidSolitaire","Pyramid Solitaire","com.ntg.solitaire.tripeaks"],
-//        "fakecall": ["FakeCall","Prank with Fake Call & SMS","com.northpark.fakecall"]
+        "homeworkout": ["Home Workout - No Equipment","Easy bodybuilding at home - no equipment needed.","homeworkout.homeworkouts.noequipment.noequipment"] ,
+        "videoconverter": ["Mp3 Video Converter","Easy CONVERT video to mp3","videotomp3converter.mp3videoconverter.videotomp3"],
     }
+
 
     function getandroidhtml(obj){
         var arrappname = Object.keys(obj);
         var lihtml = '';
         for (var i = 0; i < arrappname.length; i++) {
-            lihtml += "<li><a class='cover' data-appname='"+arrappname[i]+"' href='https://play.google.com/store/apps/details?id="+datajson[arrappname[i]][2]+"'><img class='lazy' data-original='/image/buttworkout.jpg'><div class='content'></span><span class='btn'>INSTALL</span></div></a></li>";
-			<!-- lihtml += "<li><a class='cover' data-appname='"+arrappname[i]+"' href='https://play.google.com/store/apps/details?id="+datajson[arrappname[i]][2]+"'><img class='lazy' data-original='/image/en/android/"+arrappname[i]+".jpg'><div class='content'></span><span class='btn'>INSTALL</span></div></a></li>"; -->
+			if($id.trim() === datajson[arrappname[i]][2].trim()){
+
+			}else{
+				lihtml += "<li><a class='cover' data-appname='"+arrappname[i]+"' href='https://play.google.com/store/apps/details?id="+datajson[arrappname[i]][2]+"'><img class='lazy' data-original='/image/"+arrappname[i]+".jpg'><div class='content'></span><span class='btn'>INSTALL</span></div></a></li>";
+			}
         }
         $("ul").append(lihtml);
         $("img.lazy").lazyload({effect: "fadeIn"});
@@ -101,12 +81,12 @@
     console.log($pkg);
 
     //android方法
-    if ($id == 1) {
-        getandroid();
+    // if ($id == 1) {
+    //     getandroid();
 
-    }else{
+    // }else{
         getandroidhtml(datajson);
-    }
+    // }
 
 
     function getandroid(){
