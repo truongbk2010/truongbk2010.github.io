@@ -4,5 +4,5 @@
 <changelog>
 https://github.com/ravibpatel/AutoUpdater.NET/releases
 </changelog>
-<mandatory>true</mandatory>
+<mandatory>false</mandatory>
 </item>
