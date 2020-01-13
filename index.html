@@ -49,8 +49,12 @@
 <script type="text/javascript">
 
     var datajson = {
-        "homeworkout": ["Home Workout - No Equipment","Easy bodybuilding at home - no equipment needed.","homeworkout.homeworkouts.noequipment.noequipment"] ,
-		"gymworkout": ["Gym Workout Pro","Get fitness with Gym Workout Pro","com.homeworkout.gymworkout"] ,
+        "gymworkout": ["Home Workout - No Equipment","Easy bodybuilding at home - no equipment needed.","com.homeworkout.gymworkout"] ,
+		"gymplan": ["Gym Workout Pro","Get fitness with Gym Workout Pro","com.gymworkout.fitnessbodybuilding.gymworkoutpro"] ,
+		"homeworkout": ["Gym Workout Pro","Get fitness with Gym Workout Pro","homeworkout.homeworkouts.noequipment.noequipment"] ,
+		"sixpack": ["Gym Workout Pro","Get fitness with Gym Workout Pro","sixpack.sixpackabs.absworkout.sixpackin30days.sixpackin30days"] ,
+		"losebelly": ["Gym Workout Pro","Get fitness with Gym Workout Pro","losebellyfat.flatstomach.absworkout.fatburning.losebellyfat"] ,
+		"womenworkout": ["Gym Workout Pro","Get fitness with Gym Workout Pro","womenworkout.womenworkout.femalefitness"] ,
     }
 
 
@@ -61,7 +65,7 @@
 			if($id.trim() === datajson[arrappname[i]][2].trim()){
 
 			}else{
-				lihtml += "<li><a class='cover' data-appname='"+arrappname[i]+"' href='https://play.google.com/store/apps/details?id="+datajson[arrappname[i]][2]+"'><img class='lazy' data-original='/image/"+arrappname[i]+".jpg'><div class='content'></span><span class='btn'>INSTALL</span></div></a></li>";
+				lihtml += "<li><a class='cover' data-appname='"+arrappname[i]+"' href='https://play.google.com/store/apps/details?id="+datajson[arrappname[i]][2]+"'><img class='lazy' data-original='/image/"+arrappname[i]+".png'><div class='content'></span><span class='btn'>INSTALL</span></div></a></li>";
 			}
         }
         $("ul").append(lihtml);
@@ -102,8 +106,8 @@
                 if (arrappname[i] == userapp[j]) {
 
                     if (response[arrappname[i]] == "true" ) {
-						lihtml += "<li><a onclick='return false;' class='cover' data-appname='"+arrappname[i]+"' href='https://play.google.com/store/apps/details?id="+datajson[arrappname[i]][2]+"'><img class='lazy' data-original='/image/"+arrappname[i]+".jpg'><div class='content'></span><span class='btn'>INSTALL</span></div></a></li>";
-                        <!-- lihtml += "<li><a onclick='return false;' class='cover' data-appname='"+arrappname[i]+"' href='https://play.google.com/store/apps/details?id="+datajson[arrappname[i]][2]+"'><img class='lazy' data-original='/image/"+arrappname[i]+".jpg'><div class='content'></span><span class='btn'>INSTALL</span></div></a></li>"; -->
+						lihtml += "<li><a onclick='return false;' class='cover' data-appname='"+arrappname[i]+"' href='https://play.google.com/store/apps/details?id="+datajson[arrappname[i]][2]+"'><img class='lazy' data-original='/image/"+arrappname[i]+".png'><div class='content'></span><span class='btn'>INSTALL</span></div></a></li>";
+                        <!-- lihtml += "<li><a onclick='return false;' class='cover' data-appname='"+arrappname[i]+"' href='https://play.google.com/store/apps/details?id="+datajson[arrappname[i]][2]+"'><img class='lazy' data-original='/image/"+arrappname[i]+".png'><div class='content'></span><span class='btn'>INSTALL</span></div></a></li>"; -->
                     }
                 }
             }
