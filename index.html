@@ -57,16 +57,24 @@
 		"womenworkout": ["Gym Workout Pro","Get fitness with Gym Workout Pro","womenworkout.womenworkout.femalefitness"] ,
     }
 
-
     function getandroidhtml(obj){
         var arrappname = Object.keys(obj);
         var lihtml = '';
         for (var i = 0; i < arrappname.length; i++) {
-			if($id.trim() === datajson[arrappname[i]][2].trim()){
-
-			}else{
-				lihtml += "<li><a class='cover' data-appname='"+arrappname[i]+"' href='https://play.google.com/store/apps/details?id="+datajson[arrappname[i]][2]+"'><img class='lazy' data-original='/image/"+arrappname[i]+".png'><div class='content'></span><span class='btn'>INSTALL</span></div></a></li>";
+			switch($id.trim()) {
+			  case "com.homeworkout.gymworkout":
+				if (i >= 1 && i<=3){
+					lihtml += "<li><a class='cover' data-appname='"+arrappname[i]+"' href='https://play.google.com/store/apps/details?id="+datajson[arrappname[i]][2]+"'><img class='lazy' data-original='/image/"+arrappname[i]+".png'><div class='content'></span><span class='btn'>INSTALL</span></div></a></li>";
+				}
+				break;
+			  default:
+				// code block
 			}
+			//if($id.trim() === datajson[arrappname[i]][2].trim()){
+
+			//}else{
+				//lihtml += "<li><a class='cover' data-appname='"+arrappname[i]+"' href='https://play.google.com/store/apps/details?id="+datajson[arrappname[i]][2]+"'><img class='lazy' data-original='/image/"+arrappname[i]+".png'><div class='content'></span><span class='btn'>INSTALL</span></div></a></li>";
+			//}
         }
         $("ul").append(lihtml);
         $("img.lazy").lazyload({effect: "fadeIn"});
