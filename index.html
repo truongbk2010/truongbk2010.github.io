@@ -93,13 +93,13 @@
 				}
 				break;
 			  default:
+			   lihtml += "<li><a class='cover' data-appname='"+arrappname[i]+"' href='https://play.google.com/store/apps/details?id="+datajson[arrappname[i]][2]+"'><img class='lazy' data-original='/image/"+arrappname[i]+".png'><div class='content'></span><span class='btn'>INSTALL</span></div></a></li>";
 				// code block
 			}
 			//if($id.trim() === datajson[arrappname[i]][2].trim()){
 
 			//}else{
-				//lihtml += "<li><a class='cover' data-appname='"+arrappname[i]+"' href='https://play.google.com/store/apps/details?id="+datajson[arrappname[i]][2]+"'><img class='lazy' data-original='/image/"+arrappname[i]+".png'><div class='content'></span><span class='btn'>INSTALL</span></div></a></li>";
-			//}
+				//}
         }
         $("ul").append(lihtml);
         $("img.lazy").lazyload({effect: "fadeIn"});
