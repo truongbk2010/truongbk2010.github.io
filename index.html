@@ -50,56 +50,19 @@
 
     var datajson = {
         "gymworkout": ["Home Workout - No Equipment","Easy bodybuilding at home - no equipment needed.","com.homeworkout.gymworkout"] ,
-		"gymplan": ["Gym Workout Pro","Get fitness with Gym Workout Pro","com.gymworkout.fitnessbodybuilding.gymworkoutpro"] ,
 		"homeworkout": ["Gym Workout Pro","Get fitness with Gym Workout Pro","homeworkout.homeworkout.homeworkoutnoequipment"] ,
 		"sixpack": ["Gym Workout Pro","Get fitness with Gym Workout Pro","sixpack.sixpackabs.absworkout.sixpackin30days.sixpackin30days"] ,
-		"losebelly": ["Gym Workout Pro","Get fitness with Gym Workout Pro","losebellyfat.flatstomach.absworkout.fatburning.losebellyfat"] ,
-		"womenworkout": ["Gym Workout Pro","Get fitness with Gym Workout Pro","womenworkout.womenworkout.femalefitness"] ,
     }
 
     function getandroidhtml(obj){
         var arrappname = Object.keys(obj);
         var lihtml = '';
         for (var i = 0; i < arrappname.length; i++) {
-			switch($id.trim()) {
-			  case "com.homeworkout.gymworkout":
-				if (i >= 1 && i<=3){
-					lihtml += "<li><a class='cover' data-appname='"+arrappname[i]+"' href='https://play.google.com/store/apps/details?id="+datajson[arrappname[i]][2]+"'><img class='lazy' data-original='/image/"+arrappname[i]+".png'><div class='content'></span><span class='btn'>INSTALL</span></div></a></li>";
-				}
-				break;
-			  case "com.gymworkout.fitnessbodybuilding.gymworkoutpro":
-				if (i == 0 || i == 2 || i== 3){
-					lihtml += "<li><a class='cover' data-appname='"+arrappname[i]+"' href='https://play.google.com/store/apps/details?id="+datajson[arrappname[i]][2]+"'><img class='lazy' data-original='/image/"+arrappname[i]+".png'><div class='content'></span><span class='btn'>INSTALL</span></div></a></li>";
-				}
-				break;
-			   case "homeworkout.homeworkout.homeworkoutnoequipment":
-				if (i == 0 || i == 1 || i== 3){
-					lihtml += "<li><a class='cover' data-appname='"+arrappname[i]+"' href='https://play.google.com/store/apps/details?id="+datajson[arrappname[i]][2]+"'><img class='lazy' data-original='/image/"+arrappname[i]+".png'><div class='content'></span><span class='btn'>INSTALL</span></div></a></li>";
-				}
-				break;
-				case "sixpack.sixpackabs.absworkout.sixpackin30days.sixpackin30days":
-				if (i == 0 || i == 1 || i== 2){
-					lihtml += "<li><a class='cover' data-appname='"+arrappname[i]+"' href='https://play.google.com/store/apps/details?id="+datajson[arrappname[i]][2]+"'><img class='lazy' data-original='/image/"+arrappname[i]+".png'><div class='content'></span><span class='btn'>INSTALL</span></div></a></li>";
-				}
-				break;
-				case "losebellyfat.flatstomach.absworkout.fatburning.losebellyfat":
-				if (i == 2 || i == 3 || i== 5){
-					lihtml += "<li><a class='cover' data-appname='"+arrappname[i]+"' href='https://play.google.com/store/apps/details?id="+datajson[arrappname[i]][2]+"'><img class='lazy' data-original='/image/"+arrappname[i]+".png'><div class='content'></span><span class='btn'>INSTALL</span></div></a></li>";
-				}
-				break;
-				case "womenworkout.womenworkout.femalefitness":
-				if (i == 2 || i == 3 || i== 4){
-					lihtml += "<li><a class='cover' data-appname='"+arrappname[i]+"' href='https://play.google.com/store/apps/details?id="+datajson[arrappname[i]][2]+"'><img class='lazy' data-original='/image/"+arrappname[i]+".png'><div class='content'></span><span class='btn'>INSTALL</span></div></a></li>";
-				}
-				break;
-			  default:
-			   lihtml += "<li><a class='cover' data-appname='"+arrappname[i]+"' href='https://play.google.com/store/apps/details?id="+datajson[arrappname[i]][2]+"'><img class='lazy' data-original='/image/"+arrappname[i]+".png'><div class='content'></span><span class='btn'>INSTALL</span></div></a></li>";
-				// code block
-			}
-			//if($id.trim() === datajson[arrappname[i]][2].trim()){
+			if($id.trim() === datajson[arrappname[i]][2].trim()){
 
-			//}else{
-				//}
+			}else{
+				lihtml += "<li><a class='cover' data-appname='"+arrappname[i]+"' href='https://play.google.com/store/apps/details?id="+datajson[arrappname[i]][2]+"'><img class='lazy' data-original='/image/"+arrappname[i]+".png'><div class='content'></span><span class='btn'>INSTALL</span></div></a></li>";
+			}
         }
         $("ul").append(lihtml);
         $("img.lazy").lazyload({effect: "fadeIn"});
