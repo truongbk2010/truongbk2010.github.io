@@ -6,13 +6,11 @@
 <p>My first paragraph.</p>
 <a href="intent:#Intent;action=com.appdr.miniapp.action.OPEN_VIEW;package=com.appdr.miniapp;end">Open App with extra</a>
  <p>
-  
-
 <a href="himpel://jwt/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIzYjMxNzM2MC0yNmYwLTRlNTItOGFjMy03MTQyODU2NzM1MmEiLCJhdWQiOiJmMzMyNTlkMS1iYzM4LTQwNTYtOGM4Yy1hMDE4NTc3NTk4ZGQiLCJzZXJ2aWNlIjoiaGltcGVsOnNoYXJpbmciLCJvcHRpb24iOiJyZWFkLG1lc3NhZ2UiLCJzdWIiOiJkNzA3ZmQ0YS03ODFjLTQ4M2UtODIzYi0zMGU1NjNiZDM1NjAiLCJpYXQiOjE1OTc0ODM4NjgsImV4cCI6MTU5NzU3MDI2OCwicGxhY2UiOiI1ZjI4YzY2Y2Q2MzY3NzAwMDg1ZGEzNDgiLCJkYXRhIjp7InBsYWNlbmFtZSI6ImhoZHVvbmciLCJmaXJzdGRldmljZW5hbWUiOiJIUkQyLTgwMEVHUyIsImVtYWlsIjoiaGhkdW9uZ0BodW1heGRpZ2l0YWwuY29tIiwidG90YWwiOjJ9fQ.-hYE88L9WO3ARD66HuEFB78ylFV0f6zTjI9S3qtxI60">Open App with extra 2</a>
   </p>
- 
+<p>
 <script>
- function getValue( name, url ) {
+  function getValue( name, url ) {
       if (!url) url = location.href;
       name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
       var regexS = "[\\?&]"+name+"=([^&#]*)";
@@ -21,11 +19,9 @@
       return results == null ? null : results[1];
  }
  var currentURL = window.location.href;
-  document.write(currentURL)
-  <p>
-  document.write('<a href="' + getValue('token', currentURL) + '">Accept Invitation</a>');
-  document.write(getValue('token', currentURL))
-  </p>
+ document.write('<a href="' + getValue('token', currentURL) + '">Accept Invitation</a>');
+</script>
+</p>
 </script>
 </body>
 </html>
