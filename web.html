@@ -21,10 +21,10 @@
       return results == null ? null : results[1];
  }
  var currentURL = window.location.href;
-  var token = getValue('token', currentURL);
+ var token = 'himpel://jwt/' + getValue('token', currentURL);
  document.write('Token: ' + token);
  document.write("<br>");
- document.write('<a href="' + getValue('token', currentURL) + '">Accept Invitation</a>');
+ document.write('<a href="' + token + '">Accept Invitation</a>');
 </script>
 </p>
  
